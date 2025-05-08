@@ -18,8 +18,8 @@ def query():
         category = classify_news_article(article)
         return jsonify({"response": f"{category}"})
     except Exception as e:
-        return jsonify({"response": f"Decrease the length of the article.:)"})
-        # return jsonify({"response": f"Error: {str(e)}"})
+        # return jsonify({"response": f"Decrease the length of the article.:)"})
+        return jsonify({"response": f"Error: {str(e)}"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=8080,debug=True)
